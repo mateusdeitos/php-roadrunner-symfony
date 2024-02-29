@@ -1,5 +1,11 @@
 orders:
   resource:
-    path: ../src/Orders/Routes
-    namespace: App\Orders\Routes
+    path: ../src/Order/Routes
+    namespace: App\Order\Routes
+  type: attribute
+
+health_checks:
+  resource:
+    path: ../src/HealthCheck/
+    namespace: App\HealthCheck
   type: attribute

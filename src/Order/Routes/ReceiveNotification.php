@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Orders\Routes;
+namespace App\Order\Routes;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;

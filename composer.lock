@@ -4,94 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "207a9c6ede1539144652ce9fadce62c1",
+    "content-hash": "6fa67da031e21d0a99fb2e5b74aff3ce",
     "packages": [
-        {
-            "name": "baldinof/roadrunner-bundle",
-            "version": "3.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Baldinof/roadrunner-bundle.git",
-                "reference": "ed13b632c5c916d81a217d68dec2c7daf81b2631"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Baldinof/roadrunner-bundle/zipball/ed13b632c5c916d81a217d68dec2c7daf81b2631",
-                "reference": "ed13b632c5c916d81a217d68dec2c7daf81b2631",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.1",
-                "psr/log": "^1.1 || ^2.0 || ^3.0",
-                "spiral/goridge": "^4.0",
-                "spiral/roadrunner": "^2023.1.0",
-                "spiral/roadrunner-http": "^3.0",
-                "spiral/roadrunner-worker": "^3.0.0",
-                "symfony/config": "^6.0 || ^7.0",
-                "symfony/dependency-injection": "^6.0 || ^7.0",
-                "symfony/http-kernel": "^6.0 || ^7.0",
-                "symfony/yaml": "^6.0 || ^7.0"
-            },
-            "conflict": {
-                "doctrine/doctrine-bundle": "<2.1.1",
-                "sentry/sentry-symfony": "<4.5.0",
-                "spiral/roadrunner-metrics": "<3.0.0"
-            },
-            "require-dev": {
-                "blackfire/php-sdk": "^1.21",
-                "doctrine/doctrine-bundle": "^2.1.1",
-                "doctrine/mongodb-odm": "^2.2",
-                "doctrine/orm": "^2.7.3",
-                "laminas/laminas-zendframework-bridge": "^1.4",
-                "mikey179/vfsstream": "^1.6.8",
-                "nyholm/psr7": "^1.2",
-                "sentry/sentry-symfony": "^4.5",
-                "spiral/roadrunner-grpc": "^3.0.0",
-                "spiral/roadrunner-metrics": "^3.0.0",
-                "symfony/framework-bundle": "^6.0 || ^7.0",
-                "symfony/proxy-manager-bridge": "^6.0 || ^7.0",
-                "symfony/runtime": "^6.0 || ^7.0",
-                "symfony/validator": "^6.0 || ^7.0",
-                "symfony/var-dumper": "^6.0 || ^7.0",
-                "symfony/var-exporter": "^6.0 || ^7.0"
-            },
-            "suggest": {
-                "nyholm/psr7": "For a super lightweight PSR-7/17 implementation",
-                "spiral/roadrunner-cli": "For easy installation of RoadRunner",
-                "symfony/proxy-manager-bridge": "For doctrine re-connection implementation"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "files": [
-                    "src/functions.php"
-                ],
-                "psr-4": {
-                    "Baldinof\\RoadRunnerBundle\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Florent Baldino",
-                    "email": "baldinof@gmail.com"
-                }
-            ],
-            "description": "A RoadRunner worker as a Symfony Bundle",
-            "support": {
-                "issues": "https://github.com/Baldinof/roadrunner-bundle/issues",
-                "source": "https://github.com/Baldinof/roadrunner-bundle/tree/3.0.3"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/Baldinof",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-12-05T21:04:38+00:00"
-        },
         {
             "name": "composer/semver",
             "version": "3.4.0",
@@ -172,6 +86,62 @@
                 }
             ],
             "time": "2023-08-31T09:50:34+00:00"
+        },
+        {
+            "name": "fluffydiscord/roadrunner-symfony-bundle",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FluffyDiscord/roadrunner-symfony-bundle.git",
+                "reference": "186e6a37aa060abcd7e058f211826835c152d258"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FluffyDiscord/roadrunner-symfony-bundle/zipball/186e6a37aa060abcd7e058f211826835c152d258",
+                "reference": "186e6a37aa060abcd7e058f211826835c152d258",
+                "shasum": ""
+            },
+            "require": {
+                "nyholm/psr7": "^1.8",
+                "php": ">=8.2",
+                "spiral/roadrunner": "^2023.3",
+                "spiral/roadrunner-cli": "^2.6",
+                "spiral/roadrunner-http": "^3.3",
+                "spiral/roadrunner-worker": "^3.3",
+                "symfony/dependency-injection": "^7.0",
+                "symfony/framework-bundle": "^7.0",
+                "symfony/http-kernel": "^7.0",
+                "symfony/psr-http-message-bridge": "^7.0",
+                "symfony/runtime": "^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.5",
+                "roadrunner-php/centrifugo": "^2.0",
+                "sentry/sentry-symfony": "^4.13",
+                "symfony/mime": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FluffyDiscord\\RoadRunnerBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rostislav Kaleta",
+                    "email": "rostislavkaleta@gmail.com"
+                }
+            ],
+            "description": "Roadrunner runtime for Symfony",
+            "support": {
+                "issues": "https://github.com/FluffyDiscord/roadrunner-symfony-bundle/issues",
+                "source": "https://github.com/FluffyDiscord/roadrunner-symfony-bundle/tree/v1.0.3"
+            },
+            "time": "2024-02-21T17:43:48+00:00"
         },
         {
             "name": "nyholm/psr7",
@@ -2937,6 +2907,89 @@
                 }
             ],
             "time": "2024-01-29T20:11:03+00:00"
+        },
+        {
+            "name": "symfony/psr-http-message-bridge",
+            "version": "v7.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/psr-http-message-bridge.git",
+                "reference": "d9fadaf9541d7c01c307e48905d7ce1dbee6bf38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/d9fadaf9541d7c01c307e48905d7ce1dbee6bf38",
+                "reference": "d9fadaf9541d7c01c307e48905d7ce1dbee6bf38",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "psr/http-message": "^1.0|^2.0",
+                "symfony/http-foundation": "^6.4|^7.0"
+            },
+            "conflict": {
+                "php-http/discovery": "<1.15",
+                "symfony/http-kernel": "<6.4"
+            },
+            "require-dev": {
+                "nyholm/psr7": "^1.1",
+                "php-http/discovery": "^1.15",
+                "psr/log": "^1.1.4|^2|^3",
+                "symfony/browser-kit": "^6.4|^7.0",
+                "symfony/config": "^6.4|^7.0",
+                "symfony/event-dispatcher": "^6.4|^7.0",
+                "symfony/framework-bundle": "^6.4|^7.0",
+                "symfony/http-kernel": "^6.4|^7.0"
+            },
+            "type": "symfony-bridge",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bridge\\PsrHttpMessage\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "PSR HTTP message bridge",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr-17",
+                "psr-7"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/psr-http-message-bridge/tree/v7.0.3"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-01-23T15:02:46+00:00"
         },
         {
             "name": "symfony/routing",

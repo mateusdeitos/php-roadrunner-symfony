@@ -1,15 +1,6 @@
 {
-    "baldinof/roadrunner-bundle": {
-        "version": "3.0",
-        "recipe": {
-            "repo": "github.com/symfony/recipes-contrib",
-            "branch": "main",
-            "version": "3.0",
-            "ref": "0da69c96650460102ed0a2a0004e5b347f7220c9"
-        },
-        "files": [
-            "config/packages/baldinof_road_runner.yaml"
-        ]
+    "fluffydiscord/roadrunner-symfony-bundle": {
+        "version": "v1.0.3"
     },
     "nyholm/psr7": {
         "version": "1.8",
