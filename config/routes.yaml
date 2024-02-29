@@ -1,5 +1,5 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+orders:
+  resource:
+    path: ../src/Orders/Routes
+    namespace: App\Orders\Routes
+  type: attribute
