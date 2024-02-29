@@ -1,28 +1,25 @@
 version: "3"
 
+rpc:
+  listen: tcp://127.0.0.1:6001
+
 server:
-  command: "php public/index.php"
+  command: "php app.php"
+
   env:
     APP_RUNTIME: FluffyDiscord\RoadRunnerBundle\Runtime\Runtime
 
 http:
-  address: 0.0.0.0:3000
-  middleware: ["static", "gzip"]
-  pool:
-    debug: true
-  uploads:
-    forbid: [".php", ".exe", ".bat"]
-  static:
-    dir: "public"
-    forbid: [".php", ".htaccess"]
+  address: "0.0.0.0:3000"
 
-logs:
-  mode: development
-  channels:
-    http:
-      level: debug # Log all http requests, set to info to disable
-    server:
-      level: info # Everything written to worker stderr is logged
-      mode: raw
-    metrics:
-      level: debug
+jobs:
+  consume: ["default"]
+  pool:
+    num_workers: 2
+    supervisor:
+      max_worker_memory: 100
+  pipelines:
+    default:
+      driver: memory
+      config:
+        priority: 10
