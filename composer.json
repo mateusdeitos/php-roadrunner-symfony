@@ -7,6 +7,10 @@
     "php": ">=8.2",
     "ext-ctype": "*",
     "ext-iconv": "*",
+    "doctrine/dbal": "^3",
+    "doctrine/doctrine-bundle": "^2.11",
+    "doctrine/doctrine-migrations-bundle": "^3.3",
+    "doctrine/orm": "^3.0",
     "fluffydiscord/roadrunner-symfony-bundle": "^1.0",
     "nyholm/psr7": "^1.8",
     "spiral/roadrunner-cli": "^2.6",
@@ -16,6 +20,7 @@
     "symfony/dotenv": "7.0.*",
     "symfony/flex": "^2",
     "symfony/framework-bundle": "7.0.*",
+    "symfony/maker-bundle": "^1.55",
     "symfony/runtime": "7.0.*",
     "symfony/yaml": "7.0.*"
   },

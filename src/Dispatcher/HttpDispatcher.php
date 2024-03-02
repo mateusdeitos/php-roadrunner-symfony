@@ -9,6 +9,8 @@ use Spiral\RoadRunner\EnvironmentInterface;
 use Spiral\RoadRunner\Http\PSR7Worker;
 use Spiral\RoadRunner\Worker;
 use Symfony\Bridge\PsrHttpMessage\Factory\HttpFoundationFactory;
+use Symfony\Component\Dotenv\Dotenv;
+use Symfony\Component\Runtime\SymfonyRuntime;
 
 final class HttpDispatcher
 {
@@ -17,10 +19,21 @@ final class HttpDispatcher
         return $env->getMode() === 'http';
     }
 
-    public function serve(): void
+    public function serve(Kernel $kernel): void
     {
         $factory = new Psr17Factory();
         $worker = new PSR7Worker(Worker::create(), $factory, $factory, $factory);
+
+		$env = dirname(__DIR__, 2) . '/.env';
+		// var_dump([
+		// 	'path' => $env,
+		// 	'exists' => file_exists($env),
+		// 	'readable' => is_readable($env)
+		// ]);			
+
+		(new Dotenv("APP_ENV", "APP_DEBUG"))
+			->usePutenv(false)
+			->bootEnv($env);
 		
         while (true) {
 			try {
@@ -33,8 +46,7 @@ final class HttpDispatcher
                 continue;
             }
 
-			$kernel = new Kernel('dev', true);
-			$kernel->boot();
+
 			$response = $kernel->handle((new HttpFoundationFactory())->createRequest($request));
 			ob_start();
 			$response->sendContent();
